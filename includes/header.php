@@ -18,10 +18,10 @@
                         class="inline-block uppercase font-bold px-2 py-2 hover:bg-black hover:text-white transition-colors">
                         Agenda
                     </a>
-                    <!--<a href="/faq" title="FAQ" 
+                    <a href="/faq" title="FAQ" 
                         class="inline-block uppercase font-bold px-2 py-2 hover:bg-black hover:text-white transition-colors">
                         FAQ
-                    </a>--?>
+                    </a>
                 </li>
                 <!-- <li>
                     <a href="https://wiki.liegehacker.space/shelves/projets" title="Nos projets" target="_blank" rel="noopener"
