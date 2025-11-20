@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Comment devenir membre du hackerspace ?",
+        "answer": "Pour devenir membre, il suffit de venir nous rencontrer lors d'une permanence et de remplir le formulaire d'adhésion."
+    },
+    {
+        "question": "Puis-je visiter sans être membre ?",
+        "answer": "Oui ! Les visiteurs sont les bienvenus lors de nos permanences. Il est recommandé de nous <a href=\"/contact\">prévenir de votre visite</a>."
+    },
+    {
+        "question": "Quels équipements sont disponibles ?",
+        "answer": "Le hackerspace dispose de : découpe laser, imprimantes 3D, CNC, outils pour le travail du bois et du métal, matériel électronique, etc. La liste complète est disponible sur notre wiki."
+    },
+    {
+        "question": "Faut-il des compétences techniques ?",
+        "answer": "Non ! Le hackerspace est ouvert à tous, débutants comme experts. L'entraide et le partage de connaissances sont au cœur de notre philosophie."
+    },
+    {
+        "question": "Quels sont les horaires d'ouverture ?",
+        "answer": "Nous sommes ouverts chaque mercredi de 16h à 22h. Certains samedis sont également ouverts, consultez notre agenda pour les dates."
+    }
+]
