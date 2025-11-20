@@ -3,12 +3,9 @@
     <p class="text-sm mb-2 italic">
         Outremeuse - +350m2 - Découpe laser, Impression 3D, Craft, Couture, CNC, Travail du bois, Travail du métal, Rétro-ingénierie, Audio-visuel, Résidences, ...
     </p>
-    <p class="text-sm mb-2">
-        <b>Mail:</b> ping@lghs.be
-    </p>
     <p class="text-sm mb-4">
-        <b>Liège Hackerspace ASBL</b><br />
-        <a href="https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=649448256" target="_blank" rel="noopener">BE0649.448.256</a>
+        <b>Liège Hackerspace ASBL</b> - <a href="https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=649448256" target="_blank" rel="noopener">BE0649.448.256</a>
+        <br><b>Mail:</b> ping@lghs.be
     </p>
     <nav class="mt-4">
         <ul class="flex justify-center items-center gap-3">
