@@ -12,7 +12,7 @@ require_once('includes/router.php');
     <title>Liège Hackerspace | Learn \ Make \ Share | <?php echo $page_title; ?></title>
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Liège Hackerspace | Learn \ Make \ Share">
+    <meta property="og:title" content="Liège Hackerspace | <?php echo $page_title; ?> | Learn \ Make \ Share">
     <meta property="og:url" content="https://lghs.be">
     <meta property="og:image" content="https://lghs.be/images/opengraphHS.jpg">
     <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@ require_once('includes/router.php');
     <meta property="og:site_name" content="Liège Hackerspace">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Liège Hackerspace | Learn \ Make \ Share">
+    <meta name="twitter:title" content="Liège Hackerspace | <?php echo $page_title; ?> | Learn \ Make \ Share">
     <meta name="twitter:description" content="Le Liège Hackerspace est un tiers-lieu d'inclusion sociale et technologique où des personnes partageant un intérêt commun peuvent se rencontrer, collaborer, coopérer et mutualiser.">
     <meta name="twitter:image" content="https://lghs.be/images/opengraphHS.jpg">
     <!-- SEO classique -->
