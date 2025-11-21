@@ -29,6 +29,7 @@
             <ul>
                 <li><b>Admin:</b> admin@lghs.be</li>
                 <li><b>Caméra & RGPD:</b> cctv@lghs.be</li>
+                <li><b>NOC & Abuse:</b> noc@lghs.be</li>
             </ul>
     </div>
 </article>
