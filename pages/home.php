@@ -11,7 +11,7 @@
         </p>
         <h4>Des pirates ?</h4>
         <p>
-            Le terme “hacker”, galvaudé en français, ne se réfère pas ici au “pirate”. Il désigne plutôt un bidouilleur, une personne curieuse <em>débutante comme experte</em> qui souhaite apprendre, partager le savoir et le savoir-faire, se poser des questions et créer de nouvelles choses.        </p>
+            Le terme “hacker”, galvaudé en français, ne se réfère pas ici au “pirate”. Il désigne plutôt un bidouilleur, une personne curieuse <em>débutante comme experte</em> qui souhaite apprendre, partager le savoir et le savoir-faire, se poser des questions et créer de nouvelles choses.</p>
         <h4>Pas de service</h4>
         <p>
             Enfin pas directement... Dans un hackerspace, il n'y a pas de clients ni vraiment de services « prêts à consommer ». C'est un lieu participatif où chacun apprend, expérimente et contribue à sa manière. Nous sommes évidemment ouverts à des collaborations avec des artistes, des collectifs...
