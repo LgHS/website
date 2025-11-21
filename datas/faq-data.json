@@ -14,5 +14,13 @@
     {
         "question": "Quels sont les horaires d'ouverture ?",
         "answer": "Nous sommes ouverts chaque mercredi de 16h à 22h aux visiteurs.<br><br>D’autres ouvertures publiques sont indiquées dans <a href=\"/agenda\">notre agenda</a>. Certains jours sont thématisés, conditionnés ou limités, lisez la description du jour concerné.<br><br><i>Les membres disposent d’un accès permanent au hackerspace sous conditions.</i>"
+    },
+    {
+        "question": "Quel est le coût de l’adhésion et comment ça fonctionne ?",
+        "answer": "Une cotisation annuelle de 5€ octroie le statut de membre adhérant.<br><b>+</b> Une participation mensuel à partir de 20 € donnant accès à tout l'équipement. <i><br><br>Il est possible de payer un tarif préférentiel à partir de 10 € en fonction de vos revenus. <b>Ce choix est laissé à votre discrétion</b>, merci de jouer franc jeu, les cotisations étant les seules sources de revenus fixes de l’association. Vous pouvez en discuter avec la personne en charge de votre inscription.</i>"
+    },
+    {
+        "question": "Quels outils/équipements sont à disposition pour les membres ?",
+        "answer": "Découpe laser, Impression 3D, Fraiseuses numérique, Travail du bois, Travail du métal, Matériel pour l'électronique, Équipement audio-visuel, Mécanique vélo, ..."
     }
 ]
