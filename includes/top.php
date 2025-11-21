@@ -8,10 +8,10 @@
             <img src="images/user-crown.svg" alt="" class="w-4 h-4 mr-2">
         </li>
         <li>
-            <a href="https://chat.lghs.be/" title="Rocket Chat" target="_blank" rel="noopener" class="px-1 hover:underline">RocketChat</a>
+            <a href="https://chat.lghs.be/" title="RocketChat" target="_blank" rel="noopener" class="px-1 hover:underline">RocketChat</a>
         </li>
         <li>
-            <a href="https://passport.lghs.be/" title="Espace membres" target="_blank" rel="noopener" class="px-1 hover:underline">Passport</a>
+            <a href="https://passport.lghs.be/" title="Passport" target="_blank" rel="noopener" class="px-1 hover:underline">Passport</a>
         </li>
         <li>
             <a href="https://uptime.lghs.be/status/all" title="Monitoring" target="_blank" rel="noopener" class="px-1 hover:underline">Monitoring</a>
