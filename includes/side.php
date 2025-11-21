@@ -38,7 +38,7 @@
                 <img src="images/tram.svg" alt="" class="w-8 h-8">
                 Tram
             </h5>
-            <p class="mb-1">Distance: 750m</p>
+            <p class="mb-1 text-sm">Distance: 750m</p>
             <ul class="list-disc liste-marge mb-3">
                 <li>Arrêt Curtius</li>
                 <li>Arrêt Pont Maghin</li>
