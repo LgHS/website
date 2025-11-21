@@ -12,6 +12,10 @@
         "answer": "Non ! Le hackerspace est ouvert à tous, débutants comme experts. L'entraide et le partage de connaissances sont au cœur de notre philosophie."
     },
     {
+        "question": "Vous êtes des pirates ?",
+        "answer": "Le terme “hacker”, galvaudé en français, ne se réfère pas ici au “pirate”. Il désigne plutôt un bidouilleur, une personne curieuse <em>débutante comme experte</em> qui souhaite apprendre, partager le savoir et le savoir-faire, se poser des questions et créer de nouvelles choses."
+    },
+    {
         "question": "Quels sont les horaires d'ouverture ?",
         "answer": "Nous sommes ouverts chaque mercredi de 16h à 22h aux visiteurs.<br><br>D’autres ouvertures publiques sont indiquées dans <a href=\"/agenda\">notre agenda</a>. Certains jours sont thématisés, conditionnés ou limités, lisez la description du jour concerné.<br><br><i>Les membres disposent d’un accès permanent au hackerspace sous conditions.</i>"
     },
