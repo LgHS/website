@@ -36,7 +36,7 @@
                 <img src="https://placehold.co/150x60/eeeeee/333333?text=Levita Magic" alt="Partenaire 8" class="h-12 w-auto">
             </a>
             <a href="#" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100">
-                <img src="https://placehold.co/150x60/eeeeee/333333?text=Logo+9" alt="Partenaire 9" class="h-12 w-auto">
+                <img src="https://placehold.co/150x60/eeeeee/333333?text=LiLiT" alt="Partenaire 9" class="h-12 w-auto">
             </a>
         </div>
     </div>
