@@ -96,6 +96,7 @@ require_once('includes/router.php');
             <?php include('includes/side.php'); ?>
         </div>
         <?php //include('includes/partners.php'); ?>
+        <?php include('includes/gallery.php'); ?>
         <?php include('includes/footer.php'); ?>
     </div>
     <script>
