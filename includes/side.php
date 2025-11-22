@@ -25,6 +25,7 @@
         <div class="leading-relaxed">
             <h4>Adresse</h4>
             <p class="mb-4">Rue de la Loi 16, 4020 Liège (Outremeuse).</p>
+            <p class="mb-1 text-sm">What3Words: <a href="https://what3words.com/effectif.applaudir.ouverte" target="_blank" rel="noopener">effectif.applaudir.ouverte</a></p>
             <h4>Comment s'y rendre</h4>
             <h5 class="flex items-center gap-2 font-bold mb-1">
                 <img src="images/train.svg" alt="" class="w-8 h-8">
