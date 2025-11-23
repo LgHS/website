@@ -1,4 +1,4 @@
-<footer class="mt-24 pt-4 text-center relative">
+<footer class="mt-14 pt-4 text-center relative">
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[200px] h-px bg-black"></div>
     <p class="text-sm mb-2 italic">
         Outremeuse - +350m2 - Découpe laser, Impression 3D, Craft, Couture, CNC, Travail du bois, Travail du métal, Rétro-ingénierie, Audio-visuel, Résidences, ...
