@@ -29,7 +29,7 @@ function processDescription($text) {
         Trouvez ci-dessous l'agenda du Liège Hackerspace pour les <strong><?php echo $agenda_days_limit; ?> prochains jours</strong>.
     </p>
     <p class="text-sm text-gray-600">
-        <em>Certains événements sont partiellement ou totalement indépendants du hackerspace mais organisés dans ses murs, souvent par ses membres.</em>
+        <em>Certains événements sont partiellement ou totalement indépendants du hackerspace mais organisés dans ses murs, souvent par ses membres. Consultez la description de l'évenement pour en savoir plus.</em>
     </p>
     <?php if (empty($events)): ?>
         <div class="leading-relaxed">
