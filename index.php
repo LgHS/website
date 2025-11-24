@@ -95,7 +95,7 @@ require_once('includes/router.php');
             </main>
             <?php include('includes/side.php'); ?>
         </div>
-        <?php //include('includes/partners.php'); ?>
+        <?php in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1']) && include('includes/partners.php'); ?>
         <?php include('includes/gallery.php'); ?>
         <?php include('includes/footer.php'); ?>
     </div>
