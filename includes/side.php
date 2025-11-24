@@ -57,14 +57,14 @@
                 Vélo
             </h5>
             <p class="mb-3">
-                Voir fiche <a href="https://wiki.liegehacker.space/books/mobilite/page/2-roues" target="_blank" rel="noopener">"Au hackerspace à vélo"</a>
+                <a href="https://wiki.liegehacker.space/books/mobilite/page/2-roues" target="_blank" rel="noopener">Au hackerspace à vélo</a>
             </p>
             <h5 class="flex items-center gap-2 font-bold mb-1">
                 <img src="images/voiture.svg" alt="" class="w-8 h-8">
                 Voiture
             </h5>
             <p class="mb-3">
-                Voir fiche <a href="https://wiki.liegehacker.space/books/mobilite/page/voiture" target="_blank" rel="noopener">"Au hackerspace en voiture"</a>
+                <a href="https://wiki.liegehacker.space/books/mobilite/page/voiture" target="_blank" rel="noopener">Au hackerspace en voiture</a>
             </p>
             <h5 class="flex items-center gap-2 font-bold mb-1">
                 <img src="images/rocket.svg" alt="" class="w-8 h-8">
