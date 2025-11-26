@@ -384,6 +384,9 @@ class ICalParser {
     }
     
     private function parseDate($dateString, $timezone = 'UTC') {
+        // Vérifier si la date est en UTC (finit par Z)
+        $isUTC = (substr($dateString, -1) === 'Z');
+        
         // Format: 20251120T160000Z ou 20251120 ou 20251120T160000
         $dateString = str_replace(['T', 'Z'], ['', ''], $dateString);
         
@@ -394,6 +397,11 @@ class ICalParser {
         } else {
             // Date + heure
             $date = DateTime::createFromFormat('YmdHis', $dateString, new DateTimeZone($timezone));
+        }
+        
+        // Si la date était en UTC et qu'on n'a pas déjà un timezone spécifique, convertir vers Europe/Brussels
+        if ($date && $isUTC && $timezone === 'UTC') {
+            $date->setTimezone(new DateTimeZone('Europe/Brussels'));
         }
         
         return $date ?: null;
