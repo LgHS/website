@@ -4,7 +4,7 @@
     </h3>
     <div class="leading-relaxed">
         <p>
-            Situé sur l'île de la République libre d'Outremeuse à Liège, le <strong>Liège Hackerspace</strong> <em>(LgHs en abrégé)</em> est un tiers-lieu d'inclusion sociale et technologique où des personnes partageant un intérêt commun peuvent se rencontrer, collaborer, coopérer et mutualiser leurs ressources ainsi que leurs connaissances.
+            Situé sur l'île de la <abbr title="Il s'agit de folklore">République libre d'Outremeuse</abbr> à Liège, le <strong>Liège Hackerspace</strong> <em>(LgHs en abrégé)</em> est un tiers-lieu d'inclusion sociale et technologique où des personnes partageant un intérêt commun peuvent se rencontrer, collaborer, coopérer et mutualiser leurs ressources ainsi que leurs connaissances.
         </p>
         <p>
             Les hackerspaces peuvent être vus comme des laboratoires communautaires ouverts où des gens peuvent partager des ressources, savoirs,...
