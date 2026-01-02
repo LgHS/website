@@ -117,6 +117,9 @@ class ICalParser {
         foreach ($recurringEvents as $event) {
             $occurrences = $this->generateOccurrences($event, $now, $maxDate);
             
+            // Stocker les occurrences qui seront remplacées par des exceptions
+            $replacedOccurrences = [];
+            
             // Pour chaque occurrence, vérifier s'il y a une exception
             foreach ($occurrences as $occurrence) {
                 $uid = $event['UID'];
@@ -141,6 +144,10 @@ class ICalParser {
                         if ($exceptionDate && 
                             $exceptionDate->format('Y-m-d H:i') === $occurrence['start']->format('Y-m-d H:i')) {
                             // Cette occurrence est remplacée par l'exception
+                            // Marquer l'occurrence originale comme remplacée
+                            $replacedOccurrences[] = $exceptionDate->format('Y-m-d H:i');
+                            
+                            // Remplacer par les données de l'exception
                             $occurrence = [
                                 'title' => $this->decodeText($exception['SUMMARY'] ?? $occurrence['title']),
                                 'description' => $this->decodeText($exception['DESCRIPTION'] ?? $occurrence['description']),
@@ -157,6 +164,33 @@ class ICalParser {
                 }
                 
                 $upcoming[] = $occurrence;
+            }
+            
+            // AJOUT CRITIQUE : Ajouter les exceptions qui ne remplacent pas d'occurrence existante
+            // (ex: événement décalé à une nouvelle date)
+            if (isset($exceptions[$event['UID']])) {
+                foreach ($exceptions[$event['UID']] as $exception) {
+                    $timezone = $this->getTimezone($exception);
+                    $exceptionStart = $this->parseDate($exception['DTSTART'], $timezone);
+                    
+                    // Vérifier que cette exception n'a pas déjà été traitée
+                    if ($exceptionStart && !in_array($exceptionStart->format('Y-m-d H:i'), array_map(function($occ) {
+                        return $occ['start']->format('Y-m-d H:i');
+                    }, $upcoming))) {
+                        // Cette exception décale l'événement vers une nouvelle date
+                        if ($exceptionStart >= $now && $exceptionStart <= $maxDate) {
+                            $upcoming[] = [
+                                'title' => $this->decodeText($exception['SUMMARY'] ?? $event['SUMMARY'] ?? 'Sans titre'),
+                                'description' => $this->decodeText($exception['DESCRIPTION'] ?? $event['DESCRIPTION'] ?? ''),
+                                'location' => $this->decodeText($exception['LOCATION'] ?? $event['LOCATION'] ?? ''),
+                                'start' => $exceptionStart,
+                                'end' => isset($exception['DTEND']) ? $this->parseDate($exception['DTEND'], $timezone) : null,
+                                'url' => $exception['URL'] ?? $event['URL'] ?? '',
+                                'is_recurring' => true
+                            ];
+                        }
+                    }
+                }
             }
         }
         
@@ -193,34 +227,32 @@ class ICalParser {
         // Extraire la timezone
         $timezone = $this->getTimezone($event);
         
-        // Parser la RRULE
-        $rrule = $this->parseRRule($event['RRULE']);
-        if (!$rrule) return $occurrences;
-        
+        // Parser la date de début
         $dtstart = $this->parseDate($event['DTSTART'], $timezone);
         if (!$dtstart) return $occurrences;
         
-        $dtend = isset($event['DTEND']) ? $this->parseDate($event['DTEND'], $timezone) : null;
+        // Parser la règle de récurrence
+        $rrule = $this->parseRRule($event['RRULE']);
+        
+        // Calculer la durée
         $duration = null;
-        if ($dtend) {
-            $duration = $dtstart->diff($dtend);
+        if (isset($event['DTEND'])) {
+            $dtend = $this->parseDate($event['DTEND'], $timezone);
+            if ($dtend) {
+                $duration = $dtstart->diff($dtend);
+            }
         }
         
-        // Parser les dates d'exception (EXDATE)
+        // Récupérer les dates d'exception (EXDATE)
         $exdates = [];
         if (isset($event['EXDATE'])) {
-            $exdateValues = is_array($event['EXDATE']) ? $event['EXDATE'] : [$event['EXDATE']];
-            
-            foreach ($exdateValues as $exdateLine) {
-                // Extraire la valeur de la ligne complète
-                // Format: EXDATE;TZID=Europe/Brussels:20251224T160000
-                if (strpos($exdateLine, ':') !== false) {
-                    $parts = explode(':', $exdateLine, 2);
-                    $exdateLine = $parts[1];
-                }
+            foreach ($event['EXDATE'] as $exdateLine) {
+                // Format: EXDATE;TZID=Europe/Brussels:20251224T160000,20251231T160000
+                // Extraire les dates après le ":"
+                if (strpos($exdateLine, ':') === false) continue;
                 
-                // Séparer les dates multiples (séparées par des virgules)
-                $dates = explode(',', $exdateLine);
+                $parts = explode(':', $exdateLine, 2);
+                $dates = explode(',', $parts[1]);
                 
                 foreach ($dates as $dateStr) {
                     $dateStr = trim($dateStr);
