@@ -30,5 +30,9 @@
     {
         "question": "Vie privée, photos et vidéos.",
         "answer": "Le respect de la vie privée est primordial dans notre hackerspace. Merci de respecter la vie privée des membres et visiteurs. Photographiez ou filmez uniquement avec l’accord des personnes cadrées et respectez les refus. "
+    },
+    {
+        "question": "Prestez-vous des services ? Ou de la sous-traitance ?",
+        "answer": "Dans la grande majorité des cas, non. Dans un hackerspace, il n'y a pas de clients ni vraiment de services «prêts à consommer». C'est un lieu participatif où chacun apprend, expérimente et contribue à sa manière. Nous sommes évidemment ouverts à des collaborations avec des artistes, des collectifs..."
     }
 ]
