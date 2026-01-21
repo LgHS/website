@@ -26,5 +26,9 @@
     {
         "question": "Quels outils/équipements sont à disposition pour les membres ?",
         "answer": "Découpe laser, Impression 3D, Fraiseuses numérique, Travail du bois, Travail du métal, Matériel pour l'électronique, Équipement audio-visuel, Mécanique vélo, ...<br><br><i>Au hackerspace, le parc machines est mis à disposition “en l’état” et sans aucune garantie de disponibilité ou de bon fonctionnement à un instant donné. Ce n’est pas un service ni une prestation : c’est un espace communautaire où les outils peuvent être en panne, en maintenance ou indisponibles selon les projets en cours.</i>"
+    },
+    {
+        "question": "Vie privée, photos et vidéos.",
+        "answer": "Le respect de la vie privée est primordial dans notre hackerspace. Merci de respecter la vie privée des membres et visiteurs. Photographiez ou filmez uniquement avec l’accord des personnes cadrées et respectez les refus. "
     }
 ]
