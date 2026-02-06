@@ -25,6 +25,25 @@ function processDescription($text) {
     
     return $text;
 }
+
+function getEventColor($title) {
+    $title = strtolower($title);
+    
+    $keywords = [
+        'on5vl'                    => '#215387',
+        'liege linux team'         => '#0472c7',
+        'install party'            => '#8b5cf6',
+        'expo'                     => '#ff0066ff',
+    ];
+    
+    foreach ($keywords as $keyword => $color) {
+        if (strpos($title, $keyword) !== false) {
+            return $color;
+        }
+    }
+    
+    return '#ffd800'; // Jaune par défaut
+}
 ?>
 <article class="mb-6">
     <h3 class="bg-black text-white uppercase font-bold px-4 py-3 text-base mb-4">
@@ -50,7 +69,7 @@ function processDescription($text) {
     <?php else: ?>
         <div class="leading-relaxed">
             <?php foreach ($events as $event): ?>
-                <h4><?php echo htmlspecialchars($event['title']); ?></h4>
+                <h4 style="border-left-color: <?php echo getEventColor($event['title']); ?> !important;"><?php echo htmlspecialchars($event['title']); ?></h4>
                 <p class="text-sm text-gray-600">
                     <span class="font-semibold">📅 <?php 
                         $formatter = new IntlDateFormatter(
