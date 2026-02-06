@@ -16,8 +16,14 @@ if ($icsContent) {
 }
 
 function processDescription($text) {
-    $pattern = '/(https?:\/\/[^\s<]+)/i';
-    return preg_replace($pattern, '<a href="$1" target="_blank" rel="noopener">$1</a>', $text);
+    // Clean du HTML venant du G Calendar
+    $text = preg_replace('/<a\s+href=/i', '<a target="_blank" rel="noopener" href=', $text);
+    
+    // Nettoyer les doublons
+    $text = str_replace('target="_blank" target="_blank"', 'target="_blank"', $text);
+    $text = str_replace('rel="noopener" rel="noopener"', 'rel="noopener"', $text);
+    
+    return $text;
 }
 ?>
 <article class="mb-6">
@@ -26,7 +32,12 @@ function processDescription($text) {
     </h3>
 
     <p class="text-lg mb-3">
-        Trouvez ci-dessous l'agenda du Liège Hackerspace pour les <strong><?php echo $agenda_days_limit; ?> prochains jours</strong>.
+        Trouvez ci-dessous l'agenda du Liège Hackerspace pour les
+        <?php if ($agenda_days_limit == 42): ?>
+            <strong><abbr title="La réponse à la grande question sur la vie, l'univers et le reste (Le Guide du voyageur galactique - Douglas Adams)." style="text-decoration: underline dotted; cursor: help;"><?php echo $agenda_days_limit; ?> prochains jours</abbr></strong>.
+        <?php else: ?>
+            <strong><?php echo $agenda_days_limit; ?> prochains jours</strong>.
+    <?php endif; ?>
     </p>
     <p class="text-sm text-gray-600">
         <em>Certains événements sont partiellement ou totalement indépendants du hackerspace mais organisés dans ses murs, souvent par ses membres. Consultez la description de l'évenement pour en savoir plus.</em>
