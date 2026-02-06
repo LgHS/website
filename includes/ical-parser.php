@@ -194,12 +194,26 @@ class ICalParser {
             }
         }
         
+        // Déduplication : éliminer les événements en double (même titre + même date/heure)
+        $uniqueEvents = [];
+        $seenKeys = [];
+        
+        foreach ($upcoming as $event) {
+            // Créer une clé unique basée sur le titre et la date/heure de début
+            $key = $event['title'] . '|' . $event['start']->format('Y-m-d H:i:s');
+            
+            if (!isset($seenKeys[$key])) {
+                $seenKeys[$key] = true;
+                $uniqueEvents[] = $event;
+            }
+        }
+        
         // Trier par date
-        usort($upcoming, function($a, $b) {
+        usort($uniqueEvents, function($a, $b) {
             return $a['start'] <=> $b['start'];
         });
         
-        return array_slice($upcoming, 0, $limit);
+        return array_slice($uniqueEvents, 0, $limit);
     }
     
     /**
