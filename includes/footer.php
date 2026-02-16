@@ -22,6 +22,12 @@
                 </a>
             </li>
             <li>
+                <a href="https://mastodon.social/@lghackerspace" title="Mastondon" target="_blank" rel="noopener" 
+                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    <img src="images/mastodon.svg" alt="Mastodon" class="w-full h-full">
+                </a>
+            </li>
+            <li>
                 <a href="https://github.com/LgHS" title="Github" target="_blank" rel="noopener" 
                     class="block w-10 h-10 hover:opacity-70 transition-opacity">
                     <img src="images/github.svg" alt="Github" class="w-full h-full">
