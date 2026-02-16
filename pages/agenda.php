@@ -59,7 +59,7 @@ function getEventColor($title) {
     <?php endif; ?>
     </p>
     <p class="text-sm text-gray-600">
-        <em>Certains événements sont partiellement ou totalement indépendants du hackerspace mais organisés dans ses murs, souvent par ses membres. Consultez la description de l'évenement pour en savoir plus.</em>
+        <em>Certains événements, organisés dans nos locaux (par nos membres ou des tiers), sont partiellement ou totalement indépendants du hackerspace. D’autres sont portés par le hackerspace en extérieur ou en collaboration.<br>Consultez la description de l’événement pour en savoir plus.</em>
     </p>
     <?php if (empty($events)): ?>
         <div class="leading-relaxed">
