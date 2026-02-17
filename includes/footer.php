@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://spaceapi.lghs.be/" title="SpaceAPI" target="_blank" rel="noopener"
+                <a href="https://spaceapi.lghs.be/" title="SpaceAPI" target="_blank" rel="noopener"
                     class="block w-10 h-10 hover:opacity-70 transition-opacity">
                     <img src="images/spaceapi.svg" alt="Space API" class="w-full h-full">
                 </a>
