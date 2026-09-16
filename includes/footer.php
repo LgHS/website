@@ -8,52 +8,52 @@
         <br><b>Mail:</b> ping@lghs.be
     </p>
     <nav class="mt-4">
-        <ul class="flex justify-center items-center gap-3">
+        <ul class="flex flex-wrap justify-center items-center gap-2 md:gap-3">
             <li>
                 <a href="https://www.facebook.com/liegehackerspace/" title="Facebook" target="_blank" rel="noopener" 
-                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    class="block w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity">
                     <img src="images/facebook.svg" alt="Facebook" class="w-full h-full">
                 </a>
             </li>
             <li>
                 <a href="https://www.instagram.com/lghackerspace/" title="Instagram" target="_blank" rel="noopener" 
-                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    class="block w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity">
                     <img src="images/instagram.svg" alt="Instagram" class="w-full h-full">
                 </a>
             </li>
             <li>
                 <a href="https://mastodon.social/@lghackerspace" title="Mastondon" target="_blank" rel="noopener" 
-                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    class="block w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity">
                     <img src="images/mastodon.svg" alt="Mastodon" class="w-full h-full">
                 </a>
             </li>
             <li>
                 <a href="https://github.com/LgHS" title="Github" target="_blank" rel="noopener" 
-                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    class="block w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity">
                     <img src="images/github.svg" alt="Github" class="w-full h-full">
                 </a>
             </li>
             <li>
                 <a href="https://hackerspaces.be/" title="Hackerspaces" target="_blank" rel="noopener" 
-                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    class="block w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity">
                     <img src="images/spaceinvaders.svg" alt="SpaceInvaders" class="w-full h-full">
                 </a>
             </li>
             <li>
                 <a href="https://hswd.iooner.io/#space=Liege+Hackerspace" title="Hackerspaces World Domination" target="_blank" rel="noopener"
-                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    class="block w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity">
                     <img src="images/world.svg" alt="Hackerspaces World Domination" class="w-full h-full">
                 </a>
             </li>
             <li>
                 <a href="https://mapall.space/heatmap/show.php?id=Liege+Hackerspace" title="mapall.space/heatmap" target="_blank" rel="noopener"
-                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    class="block w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity">
                     <img src="images/heat.svg" alt="Heatmap" class="w-full h-full">
                 </a>
             </li>
             <li>
                 <a href="https://spaceapi.lghs.be/" title="SpaceAPI" target="_blank" rel="noopener"
-                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    class="block w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity">
                     <img src="images/spaceapi.svg" alt="Space API" class="w-full h-full">
                 </a>
             </li>
