@@ -34,5 +34,9 @@
     {
         "question": "Prestez-vous des services ? Ou de la sous-traitance ?",
         "answer": "Dans la grande majorité des cas, non. Dans un hackerspace, il n'y a pas de clients ni vraiment de services «prêts à consommer». C'est un lieu participatif où chacun apprend, expérimente et contribue à sa manière. Nous sommes évidemment ouverts à des collaborations avec des artistes, des collectifs..."
+    },
+    {
+        "question": "Existe-t-il d'autres lieux plus proches de chez moi ?",
+        "answer": "Oui, consultez notre liste de <a href=\"/lieux\">lieux amis</a>. Vous pouvez également chercher sur <a href=\"https://hswd.iooner.io/\" target=\"_blank\" rel=\"noopener\">hswd.iooner.io</a>, ou via les annuaires <a href=\"https://hackerspaces.be/\" target=\"_blank\" rel=\"noopener\">hackerspaces.be</a> pour la Belgique et <a href=\"https://hackerspaces.org/\" target=\"_blank\" rel=\"noopener\">hackerspaces.org</a> à l'échelle mondiale.<br><br>N'hésitez pas également à rechercher un fablab dans votre région, il y en a peut-être un proche de chez vous !"
     }
 ]

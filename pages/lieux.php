@@ -17,7 +17,7 @@
             <div class="border-2 border-black p-4 bg-white hover:bg-gray-50 transition-colors">
                 <p class="font-bold text-lg mb-1">Cré@Lab</p>
                 <p class="text-sm text-gray-600 mb-2">Liège</p>
-                <a href="https://www.crealab.be" target="_blank" rel="noopener" class="text-sm">crealab.be →</a>
+                <a href="https://b3.provincedeliege.be/exploratoiredespossibles/fablab" target="_blank" rel="noopener" class="text-sm">b3.provincedeliege.be →</a>
             </div>
             <div class="border-2 border-black p-4 bg-white hover:bg-gray-50 transition-colors">
                 <p class="font-bold text-lg mb-1">YourLab</p>
@@ -60,11 +60,6 @@
                 <p class="font-bold text-lg mb-1">La Casemate</p>
                 <p class="text-sm text-gray-600 mb-2">Grenoble</p>
                 <a href="https://lacasemate.fr" target="_blank" rel="noopener" class="text-sm">lacasemate.fr →</a>
-            </div>
-            <div class="border-2 border-black p-4 bg-white hover:bg-gray-50 transition-colors">
-                <p class="font-bold text-lg mb-1">Sophia Hack Lab</p>
-                <p class="text-sm text-gray-600 mb-2">Sophia-Antipolis</p>
-                <a href="https://sophiahacklab.fr" target="_blank" rel="noopener" class="text-sm">sophiahacklab.fr →</a>
             </div>
             <div class="border-2 border-black p-4 bg-white hover:bg-gray-50 transition-colors">
                 <p class="font-bold text-lg mb-1">FabLab Montélimar</p>
