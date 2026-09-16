@@ -14,7 +14,7 @@
                 <a href="https://www.epic.net/" class="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" target="_blank" rel="noopener">
                     <img src="/images/partenaires/epic.svg" alt="EPIC" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="https://www.verixi.com/" class="flex items-center justify-center h-16 py-1 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" target="_blank" rel="noopener">
+                <a href="https://www.verixi.be/" class="flex items-center justify-center h-16 py-1 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" target="_blank" rel="noopener">
                     <img src="/images/partenaires/verixi.png" alt="Verixi" class="max-h-full max-w-full w-auto object-contain">
                 </a>
             </div>
