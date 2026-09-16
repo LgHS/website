@@ -11,7 +11,7 @@
             <a href="https://chat.lghs.be/" title="RocketChat" target="_blank" rel="noopener" class="px-1 hover:underline">Chat</a>
         </li>
         <li>
-            <a href="https://passport.lghs.be/" title="Passport" target="_blank" rel="noopener" class="px-1 hover:underline">Passport</a>
+            <a href="https://passport.lghs.be/" title="Passport" target="_blank" rel="noopener" class="px-1 hover:underline">Espace Membre</a>
         </li>
         <li>
             <a href="https://uptime.lghs.be/status/all" title="Monitoring" target="_blank" rel="noopener" class="px-1 hover:underline">Monitoring</a>
