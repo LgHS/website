@@ -31,7 +31,7 @@
             <div class="border-2 border-black p-4 bg-white hover:bg-gray-50 transition-colors">
                 <p class="font-bold text-lg mb-1">Brixel</p>
                 <p class="text-sm text-gray-600 mb-2">Hasselt</p>
-                <a href="https://brixel.club" target="_blank" rel="noopener" class="text-sm">brixel.club →</a>
+                <a href="https://brixel.be" target="_blank" rel="noopener" class="text-sm">brixel.be →</a>
             </div>
             <div class="border-2 border-black p-4 bg-white hover:bg-gray-50 transition-colors">
                 <p class="font-bold text-lg mb-1">Hackerspace Gent</p>
