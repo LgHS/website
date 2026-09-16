@@ -8,40 +8,42 @@
         </div>
         <div class="space-y-6">
             <div class="grid grid-cols-3 gap-6 items-center pb-6 border-b border-gray-300">
-                <a href="https://www.epic.net/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="https://placehold.co/200x80/eeeeee/333333?text=EPIC" alt="EPIC" class="h-16 w-auto">
+                <a href="https://www.centran.be/" class="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/centran.png" alt="Centran" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="https://www.centran.be/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="/images/partenaires/centran.png" alt="Centran" class="h-16 w-auto">
+                <a href="https://www.epic.net/" class="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/epic.svg" alt="EPIC" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="https://placehold.co/150x60/eeeeee/333333?text=NA" alt="Ville de Liège" class="h-16 w-auto">
+                <a href="https://www.verixi.com/" class="flex items-center justify-center h-16 py-1 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/verixi.png" alt="Verixi" class="max-h-full max-w-full w-auto object-contain">
                 </a>
             </div>
             <div class="grid grid-cols-4 gap-4 items-center">
-                <a href="https://www.o2switch.fr/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="/images/partenaires/o2switch.png" alt="O2switch" class="h-10 w-auto">
+                <a href="https://www.o2switch.fr/" class="flex items-center justify-center h-10 py-1.5 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/o2switch.png" alt="O2switch" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="https://www.liege.be/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="https://placehold.co/150x60/eeeeee/333333?text=Ville de Liège" alt="B3" class="h-10 w-auto">
+                <a href="https://levita-magic.com/" class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/levita.png" alt="Levita Magic" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="https://b3.provincedeliege.be/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="https://placehold.co/150x60/eeeeee/333333?text=B3" alt="B3" class="h-10 w-auto">
+                <a href="https://www.hivane.net/" class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/hivane.png" alt="Hivane" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="https://fmjbf.org/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="https://placehold.co/150x60/eeeeee/333333?text=FMJ" alt="FMJ" class="h-10 w-auto">
+                <a href="https://www.inforim.be/" class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/inforim.png" alt="Inforim" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="https://chiroux.be/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="https://placehold.co/150x60/eeeeee/333333?text=Chiroux" alt="Chiroux" class="h-10 w-auto">
+            </div>
+            <div class="grid grid-cols-4 gap-4 items-center">
+                <a href="https://chiroux.be/" class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/chiroux.svg" alt="Chiroux" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="https://www.hivane.net/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="https://placehold.co/150x60/eeeeee/333333?text=Hivane" alt="Hivane" class="h-10 w-auto">
+                <a href="https://fmjbf.org/" class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/fmj.svg" alt="FMJ" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="https://levita-magic.com/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="/images/partenaires/levita.png" alt="Levita Magic" class="h-10 w-auto">
+                <a href="https://www.lilit.be/" class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/lilit.png" alt="LiLiT" class="max-h-full max-w-full w-auto object-contain">
                 </a>
-                <a href="https://www.lilit.be/" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
-                    <img src="https://placehold.co/150x60/eeeeee/333333?text=LiLiT" alt="LiLiT" class="h-10 w-auto">
+                <a href="https://on5vl.org/" class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" target="_blank" rel="noopener">
+                    <img src="/images/partenaires/on5vl.png" alt="ON5VL" class="max-h-full max-w-full w-auto object-contain">
                 </a>
             </div>
         </div>

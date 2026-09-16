@@ -3,7 +3,7 @@
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 // Whitelist des pages autorisées
-$allowed_pages = ['home', 'contact', 'faq', 'agenda'];
+$allowed_pages = ['home', 'contact', 'faq', 'agenda', 'lieux', 'soutenir'];
 
 // Check
 if (!in_array($page, $allowed_pages)) {
@@ -15,7 +15,9 @@ $page_titles = [
     'home' => 'Accueil',
     'contact' => 'Contact',
     'faq' => 'FAQ',
-    'agenda' => 'Agenda'
+    'agenda' => 'Agenda',
+    'lieux' => 'Copains',
+    'soutenir' => 'Soutenir'
 ];
 $page_title = $page_titles[$page];
 ?>

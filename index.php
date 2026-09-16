@@ -37,53 +37,6 @@ require_once('includes/router.php');
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/lghs-full.css">
-    
-    <style type="text/tailwindcss">
-        @font-face {
-            font-family: 'Open Sans';
-            src: url('fonts/OpenSans-Regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Open Sans';
-            src: url('fonts/OpenSans-Bold.woff2') format('woff2');
-            font-weight: 700;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Open Sans';
-            src: url('fonts/OpenSans-Italic.woff2') format('woff2');
-            font-weight: 400;
-            font-style: italic;
-        }
-        @font-face {
-            font-family: 'Open Sans';
-            src: url('fonts/OpenSans-BoldItalic.woff2') format('woff2');
-            font-weight: 700;
-            font-style: italic;
-        }
-        
-        @layer components {
-            .texte-marge {
-                @apply px-2;
-            }
-            .liste-marge {
-                @apply ml-10 mr-4;
-            }
-        }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Open Sans', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="relative pb-24">
     <div class="container mx-auto px-4 relative" style="max-width: 1170px;">
