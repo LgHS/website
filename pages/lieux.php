@@ -64,7 +64,7 @@
             <div class="border-2 border-black p-4 bg-white hover:bg-gray-50 transition-colors">
                 <p class="font-bold text-lg mb-1">FabLab Montélimar</p>
                 <p class="text-sm text-gray-600 mb-2">Montélimar</p>
-                <a href="https://fablabmontelimar.fr" target="_blank" rel="noopener" class="text-sm">fablabmontelimar.fr →</a>
+                <a href="https://www.convergences26.fr/" target="_blank" rel="noopener" class="text-sm">convergences26.fr →</a>
             </div>
         </div>
         
