@@ -40,6 +40,12 @@
                 </a>
             </li>
             <li>
+                <a href="https://hswd.iooner.io/#space=Liege+Hackerspace" title="Hackerspaces World Domination" target="_blank" rel="noopener"
+                    class="block w-10 h-10 hover:opacity-70 transition-opacity">
+                    <img src="images/world.svg" alt="Hackerspaces World Domination" class="w-full h-full">
+                </a>
+            </li>
+            <li>
                 <a href="https://mapall.space/heatmap/show.php?id=Liege+Hackerspace" title="mapall.space/heatmap" target="_blank" rel="noopener"
                     class="block w-10 h-10 hover:opacity-70 transition-opacity">
                     <img src="images/heat.svg" alt="Heatmap" class="w-full h-full">
