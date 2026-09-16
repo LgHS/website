@@ -36,7 +36,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/contact" title="Contactez-nous" 
+                    <a href="/soutenir" title="Soutenir le Liège Hackerspace"
+                        class="inline-block uppercase font-bold px-2 py-2 hover:bg-black hover:text-white transition-colors">
+                        Soutenir
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact" title="Contactez-nous"
                         class="inline-block uppercase font-bold px-2 py-2 hover:bg-black hover:text-white transition-colors">
                         Contact
                     </a>

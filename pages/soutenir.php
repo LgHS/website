@@ -69,12 +69,7 @@
             
             <div class="text-center">
                 <div id="qr-code-container" class="inline-block bg-white p-4 border-4 border-black">
-                    <img 
-                        id="qr-code" 
-                        src="https://epc-qr.eu/?bname=Liege%20Hackerspace&iban=BE58068910718879&euro=5&info=Don&bic=GKCCBEBB&cut=tlrb&logo=none" 
-                        alt="QR Code de paiement"
-                        class="w-64 h-64"
-                    >
+                    <div id="qr-code" class="w-64 h-64"></div>
                 </div>
                 <p class="mt-4 text-sm text-gray-600">
                     Scannez ce QR code avec votre app bancaire pour payer
@@ -87,7 +82,7 @@
             <p class="font-bold mb-1">Liège Hackerspace ASBL</p>
             <p class="text-sm mb-1">IBAN: BE58 0689 1071 8879</p>
             <p class="text-sm mb-1">BIC: GKCCBEBB</p>
-            <p class="text-sm">Communication: Don</p>
+            <p class="text-sm">Communication: Don LGHS Web</p>
         </div>
     </div>
 </article>
@@ -117,32 +112,46 @@
     </div>
 </article>
 
+<script src="js/qrcode.min.js"></script>
 <script>
+let qrCodeInstance = null;
+
 function setAmount(amount) {
     document.getElementById('donation-amount').value = amount;
     updateQRCode();
 }
 
+// Génère le payload EPC069-12 (SEPA Credit Transfer / "GiroCode"),
+// le format lu par les applis bancaires pour pré-remplir un virement.
+function buildEpcPayload(amount) {
+    const lines = [
+        'BCD',
+        '002',
+        '1',
+        'SCT',
+        'GKCCBEBB',
+        'Liege Hackerspace',
+        'BE58068910718879',
+        amount && amount > 0 ? 'EUR' + parseFloat(amount).toFixed(2) : '',
+        '',
+        '',
+        'Don LGHS Web'
+    ];
+    return lines.join('\n');
+}
+
 function updateQRCode() {
     const amount = document.getElementById('donation-amount').value;
-    const qrImage = document.getElementById('qr-code');
-    
-    if (amount && amount > 0) {
-        const baseUrl = 'https://epc-qr.eu/';
-        const params = new URLSearchParams({
-            bname: 'Liege Hackerspace',
-            iban: 'BE58068910718879',
-            euro: amount,
-            info: 'Don',
-            bic: 'GKCCBEBB',
-            cut: 'tlrb',
-            logo: 'none'
-        });
-        
-        qrImage.src = baseUrl + '?' + params.toString();
-    } else {
-        // QR code sans montant si rien n'est entré
-        qrImage.src = 'https://epc-qr.eu/?bname=Liege%20Hackerspace&iban=BE58068910718879&euro=&info=Don&bic=GKCCBEBB&cut=tlrb&logo=none';
-    }
+    const container = document.getElementById('qr-code');
+
+    container.innerHTML = '';
+    qrCodeInstance = new QRCode(container, {
+        text: buildEpcPayload(amount),
+        width: 256,
+        height: 256,
+        correctLevel: QRCode.CorrectLevel.M
+    });
 }
+
+updateQRCode();
 </script>

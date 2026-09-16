@@ -1,14 +1,14 @@
 <nav class="absolute top-5 right-4 z-10">
     <ul class="flex items-center gap-1 text-sm text-gray-600">
-        <li class="inline-flex items-center gap-2 mr-2">
-            <span id="status-light" class="status-light status-unknown" title="Chargement..."></span>
+        <li class="inline-flex items-center gap-2 mr-2" title="Chargement...">
+            <span id="status-light" class="status-light status-unknown"></span>
             <span id="status-text" class="text-xs">Chargement</span>
         </li>
         <li class="inline-flex items-center">
             <img src="images/user-crown.svg" alt="" class="w-4 h-4 mr-2">
         </li>
         <li>
-            <a href="https://chat.lghs.be/" title="RocketChat" target="_blank" rel="noopener" class="px-1 hover:underline">RocketChat</a>
+            <a href="https://chat.lghs.be/" title="RocketChat" target="_blank" rel="noopener" class="px-1 hover:underline">Chat</a>
         </li>
         <li>
             <a href="https://passport.lghs.be/" title="Passport" target="_blank" rel="noopener" class="px-1 hover:underline">Passport</a>

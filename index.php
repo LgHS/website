@@ -56,6 +56,7 @@ require_once('includes/router.php');
         async function updateSpaceStatus() {
             const light = document.getElementById('status-light');
             const text = document.getElementById('status-text');
+            const wrapper = light.closest('li');
             try {
                 const response = await fetch('<?php echo $spaceapi_url; ?>');
                 const data = await response.json();
@@ -64,26 +65,26 @@ require_once('includes/router.php');
                 if (isOpen && openToVisitors) {
                     // Vert : Ouvert aux visiteurs
                     light.className = 'status-light status-open';
-                    light.title = 'Le hackerspace est ouvert aux visiteurs !';
+                    wrapper.title = 'Le hackerspace est ouvert aux visiteurs !';
                     text.textContent = 'Ouvert';
                     text.className = 'text-xs text-green-600 font-bold';
                 } else if (isOpen && !openToVisitors) {
                     // Orange : Ouvert mais réservé aux membres
                     light.className = 'status-light status-members-only';
-                    light.title = 'Ouvert aux membres uniquement';
+                    wrapper.title = 'Ouvert aux membres uniquement';
                     text.textContent = 'Membres';
                     text.className = 'text-xs text-orange-600 font-bold';
                 } else {
                     // Rouge : Fermé
                     light.className = 'status-light status-closed';
-                    light.title = 'Le hackerspace est fermé';
+                    wrapper.title = 'Le hackerspace est fermé';
                     text.textContent = 'Fermé';
                     text.className = 'text-xs text-red-600';
                 }
             } catch (error) {
                 console.error('Erreur lors de la récupération du statut:', error);
                 light.className = 'status-light status-unknown';
-                light.title = 'API injoinable, état du hackerspace inconnu';
+                wrapper.title = 'API injoinable, état du hackerspace inconnu';
                 text.textContent = 'État inconnu';
                 text.className = 'text-xs text-gray-500';
             }
