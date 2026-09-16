@@ -9,7 +9,7 @@
             <p class="text-sm">Rue de la Loi 16 bis,<br>4020 Liège, Belgique</p>
         </div>
         <p class="mb-4">
-            Pour rappel, le hackerspace n'est pas un club de <i>"pirates informatiques"</i>. <b>Nous ne réalisons aucune activité illégale</b>, et il est inutile de nous contacter pour récupérer un compte, contourner une protection, ou "craquer" quoi que ce soit. Notre mission porte sur l'apprentissage, le partage d'un lieu et de connaissances. 
+            Pour rappel, le hackerspace n'est pas un club de <i>"pirates informatiques"</i>. Nous ne réalisons aucune activité illégale, et il est inutile de nous contacter pour récupérer un compte, contourner une protection, ou "craquer" quoi que ce soit. Notre mission porte sur l'apprentissage, le partage d'un lieu et de connaissances. 
         </p>
         <hr class="mb-4" />
         <h4>Général</h4>

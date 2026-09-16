@@ -116,45 +116,42 @@ class ICalParser {
         // Traiter les événements récurrents
         foreach ($recurringEvents as $event) {
             $occurrences = $this->generateOccurrences($event, $now, $maxDate);
-            
-            // Stocker les occurrences qui seront remplacées par des exceptions
-            $replacedOccurrences = [];
-            
-            // Pour chaque occurrence, vérifier s'il y a une exception
+            $uid = $event['UID'];
+
+            // Suivre quelles exceptions ont servi à remplacer une occurrence (par leur RECURRENCE-ID)
+            $usedExceptionRecurrenceIds = [];
+
             foreach ($occurrences as $occurrence) {
-                $uid = $event['UID'];
-                $occurrenceDateTime = $occurrence['start']->format('Ymd\THis');
-                
-                // Chercher une exception qui correspond
                 $replaced = false;
+
                 if (isset($exceptions[$uid])) {
                     foreach ($exceptions[$uid] as $exception) {
-                        // Parser RECURRENCE-ID
                         $recurrenceId = $exception['RECURRENCE-ID'];
                         $timezone = $this->getTimezone($exception);
-                        
-                        // Nettoyer le RECURRENCE-ID (peut avoir TZID)
+
+                        // Nettoyer le RECURRENCE-ID (peut avoir TZID=... :)
                         if (strpos($recurrenceId, 'TZID=') !== false && strpos($recurrenceId, ':') !== false) {
                             $parts = explode(':', $recurrenceId, 2);
                             $recurrenceId = $parts[1];
                         }
-                        
+
                         $exceptionDate = $this->parseDate($recurrenceId, $timezone);
-                        
-                        if ($exceptionDate && 
+
+                        if ($exceptionDate &&
                             $exceptionDate->format('Y-m-d H:i') === $occurrence['start']->format('Y-m-d H:i')) {
-                            // Cette occurrence est remplacée par l'exception
-                            // Marquer l'occurrence originale comme remplacée
-                            $replacedOccurrences[] = $exceptionDate->format('Y-m-d H:i');
-                            
-                            // Remplacer par les données de l'exception
+
+                            // Marquer cette exception comme utilisée via son RECURRENCE-ID normalisé
+                            $usedExceptionRecurrenceIds[] = $exceptionDate->format('Y-m-d H:i');
+
+                            // Remplacer l'occurrence par les données de l'exception
+                            $exceptionTimezone = $this->getTimezone($exception);
                             $occurrence = [
-                                'title' => $this->decodeText($exception['SUMMARY'] ?? $occurrence['title']),
-                                'description' => $this->decodeText($exception['DESCRIPTION'] ?? $occurrence['description']),
-                                'location' => $this->decodeText($exception['LOCATION'] ?? $occurrence['location']),
-                                'start' => $this->parseDate($exception['DTSTART'], $timezone),
-                                'end' => isset($exception['DTEND']) ? $this->parseDate($exception['DTEND'], $timezone) : $occurrence['end'],
-                                'url' => $exception['URL'] ?? $occurrence['url'],
+                                'title'        => $this->decodeText($exception['SUMMARY'] ?? $occurrence['title']),
+                                'description'  => $this->decodeText($exception['DESCRIPTION'] ?? $occurrence['description']),
+                                'location'     => $this->decodeText($exception['LOCATION'] ?? $occurrence['location']),
+                                'start'        => $this->parseDate($exception['DTSTART'], $exceptionTimezone),
+                                'end'          => isset($exception['DTEND']) ? $this->parseDate($exception['DTEND'], $exceptionTimezone) : $occurrence['end'],
+                                'url'          => $exception['URL'] ?? $occurrence['url'],
                                 'is_recurring' => true
                             ];
                             $replaced = true;
@@ -162,33 +159,40 @@ class ICalParser {
                         }
                     }
                 }
-                
+
                 $upcoming[] = $occurrence;
             }
-            
-            // AJOUT CRITIQUE : Ajouter les exceptions qui ne remplacent pas d'occurrence existante
-            // (ex: événement décalé à une nouvelle date)
-            if (isset($exceptions[$event['UID']])) {
-                foreach ($exceptions[$event['UID']] as $exception) {
+
+            // Ajouter uniquement les exceptions qui décalent un événement vers une NOUVELLE date
+            // (DTSTART != RECURRENCE-ID) et qui n'ont pas déjà remplacé une occurrence in-place
+            if (isset($exceptions[$uid])) {
+                foreach ($exceptions[$uid] as $exception) {
                     $timezone = $this->getTimezone($exception);
+
+                    // Normaliser le RECURRENCE-ID de cette exception
+                    $recurrenceId = $exception['RECURRENCE-ID'];
+                    if (strpos($recurrenceId, 'TZID=') !== false && strpos($recurrenceId, ':') !== false) {
+                        $recurrenceId = explode(':', $recurrenceId, 2)[1];
+                    }
+                    $recurrenceDate = $this->parseDate($recurrenceId, $timezone);
+
+                    // Si cette exception a déjà remplacé une occurrence in-place → ignorer
+                    if ($recurrenceDate && in_array($recurrenceDate->format('Y-m-d H:i'), $usedExceptionRecurrenceIds)) {
+                        continue;
+                    }
+
+                    // C'est une exception qui déplace l'événement vers une nouvelle date
                     $exceptionStart = $this->parseDate($exception['DTSTART'], $timezone);
-                    
-                    // Vérifier que cette exception n'a pas déjà été traitée
-                    if ($exceptionStart && !in_array($exceptionStart->format('Y-m-d H:i'), array_map(function($occ) {
-                        return $occ['start']->format('Y-m-d H:i');
-                    }, $upcoming))) {
-                        // Cette exception décale l'événement vers une nouvelle date
-                        if ($exceptionStart >= $now && $exceptionStart <= $maxDate) {
-                            $upcoming[] = [
-                                'title' => $this->decodeText($exception['SUMMARY'] ?? $event['SUMMARY'] ?? 'Sans titre'),
-                                'description' => $this->decodeText($exception['DESCRIPTION'] ?? $event['DESCRIPTION'] ?? ''),
-                                'location' => $this->decodeText($exception['LOCATION'] ?? $event['LOCATION'] ?? ''),
-                                'start' => $exceptionStart,
-                                'end' => isset($exception['DTEND']) ? $this->parseDate($exception['DTEND'], $timezone) : null,
-                                'url' => $exception['URL'] ?? $event['URL'] ?? '',
-                                'is_recurring' => true
-                            ];
-                        }
+                    if ($exceptionStart && $exceptionStart >= $now && $exceptionStart <= $maxDate) {
+                        $upcoming[] = [
+                            'title'        => $this->decodeText($exception['SUMMARY'] ?? $event['SUMMARY'] ?? 'Sans titre'),
+                            'description'  => $this->decodeText($exception['DESCRIPTION'] ?? $event['DESCRIPTION'] ?? ''),
+                            'location'     => $this->decodeText($exception['LOCATION'] ?? $event['LOCATION'] ?? ''),
+                            'start'        => $exceptionStart,
+                            'end'          => isset($exception['DTEND']) ? $this->parseDate($exception['DTEND'], $timezone) : null,
+                            'url'          => $exception['URL'] ?? $event['URL'] ?? '',
+                            'is_recurring' => true
+                        ];
                     }
                 }
             }
@@ -199,7 +203,6 @@ class ICalParser {
         $seenKeys = [];
         
         foreach ($upcoming as $event) {
-            // Créer une clé unique basée sur le titre et la date/heure de début
             $key = $event['title'] . '|' . $event['start']->format('Y-m-d H:i:s');
             
             if (!isset($seenKeys[$key])) {
@@ -247,6 +250,12 @@ class ICalParser {
         
         // Parser la règle de récurrence
         $rrule = $this->parseRRule($event['RRULE']);
+
+        // Vérifier la date de fin de récurrence (UNTIL)
+        $until = null;
+        if (isset($rrule['UNTIL'])) {
+            $until = $this->parseDate(str_replace('Z', '', $rrule['UNTIL']), 'UTC');
+        }
         
         // Calculer la durée
         $duration = null;
@@ -287,6 +296,11 @@ class ICalParser {
         $count = 0;
         
         while ($current <= $endLimit && $count < $maxOccurrences) {
+            // Respecter UNTIL si défini
+            if ($until && $current > $until) {
+                break;
+            }
+
             // Vérifier si cette occurrence n'est pas dans les exceptions
             $currentDateOnly = $current->format('Y-m-d');
             $currentDateTime = $current->format('Y-m-d H:i:s');
