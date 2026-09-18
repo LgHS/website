@@ -280,6 +280,9 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -998,7 +1001,7 @@ aside h4 {
 .faq-answer > * {
   min-height: 0;
 }
-article a, aside a {
+article a, aside a, .link-yellow {
   color: #000000;
   text-decoration: none;
   background-image: linear-gradient(to top, #ffd800 0, #ffd800 35%, transparent 35%);
@@ -1007,7 +1010,7 @@ article a, aside a {
   background-position: 0 100%;
   transition: background-size 0.25s ease;
 }
-article a:hover, article a:focus, aside a:hover, aside a:focus {
+article a:hover, article a:focus, aside a:hover, aside a:focus, .link-yellow:hover, .link-yellow:focus {
   color: #000000;
   background-size: 100% 100%;
   text-decoration: none;

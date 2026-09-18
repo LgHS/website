@@ -143,7 +143,8 @@ aside h4 {
 }
 
 article a,
-aside a {
+aside a,
+.link-yellow {
     color: #000000;
     text-decoration: none;
     background-image: linear-gradient(to top, #ffd800 0, #ffd800 35%, transparent 35%);
@@ -156,7 +157,9 @@ aside a {
 article a:hover,
 article a:focus,
 aside a:hover,
-aside a:focus {
+aside a:focus,
+.link-yellow:hover,
+.link-yellow:focus {
     color: #000000;
     background-size: 100% 100%;
     text-decoration: none;
