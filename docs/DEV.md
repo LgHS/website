@@ -61,13 +61,12 @@ npx @tailwindcss/cli -i .\css\lghs-base.css -o .\css\lghs-full.css --watch
 
 #### Mise en production
 
-Lorsque votre développement est terminé, pour pouvoir déployer proprement votre fichier CSS de Tailwind en production, vous pouvez :
+**Le CSS est recompilé automatiquement au déploiement** : le workflow GitHub Actions ([`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml)) exécute `npm run build` avant chaque déploiement FTP vers o2switch, à chaque push sur `main`. Vous n'avez donc **pas besoin de recompiler manuellement avant de push** — même une modification purement PHP (texte, classes Tailwind) sans Node.js installé en local sera correctement prise en compte.
 
-1. **Cesser l'exécution** de l'application.
-2. **Exécuter la commande** suivante à la racine du projet :
+Si vous voulez tout de même générer la version minifiée en local (par exemple pour vérifier le rendu avant de push), vous pouvez utiliser le script npm dédié à la racine du projet :
 
-    ```pwsh
-    npx @tailwindcss/cli -i .\css\lghs-base.css -o .\css\lghs-full.css --minify
-    ```
+```pwsh
+npm run build
+```
 
-Cela va alors **générer une version minifiée du CSS de Tailwind** dédié à votre application pour pouvoir déployer uniquement ce dont vous avez besoin.
+Cela équivaut à la commande manuelle vue plus haut, mais avec l'option `--minify` déjà incluse.

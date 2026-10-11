@@ -69,7 +69,7 @@
 Options -Indexes
 
 # Bloquer l'accès aux fichiers sensibles
-<FilesMatch "(^\.htaccess|^\.git|composer\.json|composer\.lock|\.bak|\.sql|\.env)$">
+<FilesMatch "(^\.htaccess|^\.git|composer\.json|composer\.lock|\.bak|\.sql|\.env|\.ftp-deploy-sync-state\.json)$">
     Require all denied
 </FilesMatch>
 

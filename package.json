@@ -10,6 +10,7 @@
     "tailwindcss": "^4.2.1"
   },
   "scripts": {
+    "build": "tailwindcss -i css/lghs-base.css -o css/lghs-full.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
