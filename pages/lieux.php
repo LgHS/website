@@ -4,7 +4,7 @@
     </h3>
     <div class="leading-relaxed">
         <p class="mb-6">
-            Le Liège Hackerspace fait partie d'un écosystème de lieux de création et d'innovation en Belgique et dans la région. Voici nos amis makers, hackers et bidouilleurs !
+            D'autres lieux, en Belgique et ailleurs, partagent le même esprit : apprendre, bidouiller, partager. Voici nos amis makers, hackers et bidouilleurs !
         </p>
         
         <h4>Wallonie</h4>
