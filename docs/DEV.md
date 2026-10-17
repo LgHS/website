@@ -61,7 +61,7 @@ npx @tailwindcss/cli -i .\css\lghs-base.css -o .\css\lghs-full.css --watch
 
 #### Mise en production
 
-**Le CSS est recompilé automatiquement au déploiement** : le workflow GitHub Actions ([`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml)) exécute `npm run build` avant chaque déploiement FTP vers o2switch, à chaque push sur `main`. Vous n'avez donc **pas besoin de recompiler manuellement avant de push** — même une modification purement PHP (texte, classes Tailwind) sans Node.js installé en local sera correctement prise en compte.
+**Plus de déploiement automatique** : le site lghs.be est désormais servi par WordPress et l'auto-déploiement FTP a été retiré. Pour un rendu local, recompiler le CSS avec `npm run build`.
 
 Si vous voulez tout de même générer la version minifiée en local (par exemple pour vérifier le rendu avant de push), vous pouvez utiliser le script npm dédié à la racine du projet :
 
